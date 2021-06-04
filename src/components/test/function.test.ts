@@ -1,12 +1,18 @@
 import { mult, sum } from "./function";
 
+let a: number;
+let b: number;
+let c: number;
+
+beforeEach( () => {
+    a = 1;
+    b = 2;
+    c = 3;
+})
 
 test('sum should be correct', ()=> {
 
-
-    const a = 1;
-    const b = 2;
-    const c = 3;
+    //data
 
     //action
     const result1 = sum(a, b);
@@ -19,10 +25,7 @@ test('sum should be correct', ()=> {
 
 test('multiple should be correct', ()=> {
 
-
-    const a = 1;
-    const b = 2;
-    const c = 3;
+    //data
 
     //action
     const result1 = mult(a, b);
