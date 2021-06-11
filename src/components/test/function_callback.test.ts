@@ -1,8 +1,24 @@
 import React from 'react';
 
-test('Testing destruction', () => {
+type UserType = {
+    name: string
+    age: number
+    lessons: Array<UserLessonsType>
+    city: {
+        street: {
+            title: string
+        }
+    }
+}
 
-    const props = {
+type UserLessonsType = {
+    title: string
+}
+
+let props: UserType;
+
+beforeEach(() => {
+    props = {
         name: 'Igor',
         age: 32,
         lessons: [{title: '1'}, {title:'2'}],
@@ -12,7 +28,9 @@ test('Testing destruction', () => {
             }
         }
     }
+})
 
+test('Testing destruction', () => {
 
     // let name = user.name;
     // let age  = user.age;
@@ -26,6 +44,15 @@ test('Testing destruction', () => {
     expect(name).toBe('Igor');
     expect(lessons.length).toBe(2);
     expect(title).toBe('Shevchenka');
+
+
+})
+
+test('', () => {
+
+    let [l1,l2] = props.lessons;
+
+expect(l1.title).toBe('1');
 
 
 })
